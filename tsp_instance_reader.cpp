@@ -30,7 +30,7 @@ struct tsp_instance * read_tsp_instance(string fname){
   while( inStream >> s ){
     if(s.compare(DIMENSION)==0 || s.compare(DIMENSION_)==0){
       inStream >> s;
-      inStream >> s; //Added, so the number is read instead.
+      inStream >> s; //Read num not colon
       instance->num_points = stol(s);
       instance->x = new double[instance->num_points];
       instance->y = new double[instance->num_points];
