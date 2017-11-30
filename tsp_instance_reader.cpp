@@ -37,6 +37,7 @@ struct tsp_instance * read_tsp_instance(string fname){
     }
     if(s.compare(NAME)==0 || s.compare(NAME_)==0){
       inStream >> instance->name;
+      inStream >> instance->name;
     }
     if(s.compare(NODE_COORD_SECTION)==0){
       g = 0;
