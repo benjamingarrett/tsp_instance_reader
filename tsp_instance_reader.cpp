@@ -1,8 +1,9 @@
-#include "tsp_instance_reader.h"
-
 #include <fstream>
 #include <iostream>
+#include <string>
+#include "tsp_instance_reader.h"
 
+using std::string;
 using std::cout;
 using std::endl;
 using std::ifstream;
@@ -15,13 +16,10 @@ const string NAME_ = "NAME:";
 const string NODE_COORD_SECTION = "NODE_COORD_SECTION";
 
 struct tsp_instance * read_tsp_instance(string fname){
-
   struct tsp_instance * instance = new tsp_instance;
-
   ifstream inStream;
   long int g, j, res;
   string s;
-
   inStream.open(fname);
   if(inStream.fail()){
     cout << "Could not open file: " << fname << endl;
